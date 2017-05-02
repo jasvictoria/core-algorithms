@@ -1,57 +1,55 @@
 export default function makeChange({price, amountGiven}) {
-  // you
-let totalChange = 0;
-const quarters = 25;
-const dimes = 10;
-const nickels = 5;
-const pennies = 1;
 
-let quarterCount = 0;
-let dimeCount = 0;
-let nickelCount = 0;
-let pennyCount = 0;
+  let totalChange = 0;
+  const quarters = 25;
+  const dimes = 10;
+  const nickels = 5;
+  const pennies = 1;
 
-let changeAmount = {quarters: 0, dimes:0, nickels:0, pennies:0}
+  let changeAmount = {quarters: 0, dimes:0, nickels:0, pennies:0}
 
+   totalChange = amountGiven - price
+    console.log("Total change is: ", totalChange+ "¢")
 
-  totalChange = amountGiven - price
-  let change = 0
-   console.log("Total change is: ", totalChange+ "¢")
-
-  if (totalChange % quarters === 0){
-    quarterCount = totalChange / quarters
-    changeAmount.quarters = quarterCount
-    console.log("quarter count: " + quarterCount)
-  } else if (totalChange % quarters !== 0){
-    changeAmount = quarters*quarterCount;
-    return changeAmount;
-  }
-
-  if (totalChange % dimes !== 0){
-    changeAmount = dimes *dimeCount;
-    return changeAmount
-    } else if (totalChange % dimes === 0){
-    dimeCount = totalChange / dimes
-    changeAmount.dimes = dimeCount
-    console.log("Dime Count: "  + dimeCount)
+    if(totalChange % quarters !== 0){
+      changeAmount.quarters = Math.floor(totalChange/quarters)
+      totalChange -= (quarters * changeAmount.quarters)
+    } else if(totalChange % quarters === 0) {
+      changeAmount.quarters = Math.floor(totalChange/quarters)
+      totalChange = (quarters * changeAmount.quarters)
+      return changeAmount;
     }
 
-  if(totalChange % nickels !== 0){
-    nickelCount = Math.floor(totalChange/nickels)
-    totalChange = (nickels * nickelCount)
-  } else if(totalChange % nickels === 0) {
-    nickelCount = Math.floor(totalChange/nickels)
-    totalChange = (nickels * nickelCount)
-    console.log("Nickel Count: "  + nickelCount)
-    return changeAmount;
+     if(totalChange % dimes !== 0){
+      changeAmount.dimes = Math.floor(totalChange/dimes)
+      totalChange -= (dimes * changeAmount.dimes)
+    } else if(totalChange % dimes === 0) {
+      changeAmount.dimes = Math.floor(totalChange/dimes)
+      totalChange -= (dimes * changeAmount.dimes)
+      return changeAmount;
+    }
+
+    if(totalChange % nickels !== 0){
+      changeAmount.nickels = Math.floor(totalChange/nickels)
+      totalChange -= (nickels * changeAmount.nickels)
+    } else if(totalChange % nickels === 0) {
+      changeAmount.nickels = Math.floor(totalChange/nickels)
+      totalChange -= (nickels * changeAmount.nickels)
+      return changeAmount;
+    }
+
+    if(totalChange % pennies !== 0){
+      changeAmount.pennies = Math.floor(totalChange/pennies)
+      totalChange -= (pennies * changeAmount.pennies)
+    } else if(totalChange % pennies === 0) {
+      changeAmount.pennies = Math.floor(totalChange/pennies)
+      totalChange -= (pennies * changeAmount.pennies)
+      return changeAmount;
+    }
   }
-  console.log("Total change is: ", totalChange, " cents")
-}
 
 
-
-makeChange({ price: 100, amountGiven: 105})
-// => { quarters: 0, dimes: 0, nickels: 0, pennies: 0 }
+  makeChange({ price: 150, amountGiven: 255})
 
 // makeChange({ price: 159, amountGiven: 200 })
 // // => { quarters: 1, dimes: 1, nickels: 1, pennies: 1 }
