@@ -3,3 +3,5 @@ export default function isPalindrome(string) {
   let reverseString = newString.split('').reverse().join('')
     return reverseString === newString
 }
+
+isPalindrome('wow')
