@@ -56,4 +56,3 @@ export default function makeChange({price, amountGiven}) {
 
 // makeChange({ price: 432, amountGiven: 500 })
 // => { quarters: 2, dimes: 1, nickels: 1, pennies: 3 }r code here
-}
