@@ -9,7 +9,7 @@ export default function makeChange({price, amountGiven}) {
   let changeAmount = {quarters: 0, dimes:0, nickels:0, pennies:0}
 
    totalChange = amountGiven - price
-    console.log("Total change is: ", totalChange+ "¢")
+    // console.log("Total change is: ", totalChange+ "¢")
 
     if(totalChange % quarters !== 0){
       changeAmount.quarters = Math.floor(totalChange/quarters)
