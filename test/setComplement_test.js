@@ -1,16 +1,17 @@
 import { expect } from 'chai'
-import setUnion from '../src/setComplement'
+import setComplement from '../src/setComplement'
 
 
-describe('setUnion()', function(){
+describe('setComplement()', function(){
 
   it('should be a function', function(){
-    expect(setUnion).to.be.a('function')
+    expect(setComplement).to.be.a('function')
   })
 
-  it('returns the union of two sets)', function(){
-
-    expect(setUnion(a,b)).to.equal([ 1, 2, 3, 4, 6, 8 ])
-
+     it.only('Returns the union of two sets.)', function(){
+         const a = [1, 2, 3, 4]
+         const b = [2, 4, 6, 8]
+         console.log(setComplement(a,b))
+      expect(setComplement(a,b)).to.eql([6, 8])
+     })
     })
-  })
