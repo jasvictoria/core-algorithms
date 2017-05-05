@@ -1,16 +1,16 @@
 import { expect } from 'chai'
-import setComplement from '../src/setComplement'
+import setIntersection from '../src/setIntersection'
 
 
-describe('setComplement()', function(){
+describe('setIntersection()', function(){
 
   it('should be a function', function(){
-    expect(setComplement).to.be.a('function')
+    expect(setIntersection).to.be.a('function')
   })
 
      it('Returns the complement of two sets.)', function(){
          const a = [1, 2, 3, 4]
          const b = [2, 4, 6, 8]
-      expect(setComplement(a,b)).to.eql([6,8])
+      expect(setIntersection(a,b)).to.eql([2,4])
      })
     })

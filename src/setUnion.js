@@ -10,8 +10,3 @@ export default function setUnion(arr1, arr2) {
     );
     return uniqueArr
   }
-
-
-
-
-  //[1, 2, 3, 4, 6, 8]
