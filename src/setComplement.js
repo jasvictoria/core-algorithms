@@ -7,5 +7,3 @@ export default function setComplement(arr1,arr2) {
    })
    return result
 }
-
-setComplement(a,b)
