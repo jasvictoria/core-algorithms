@@ -46,8 +46,8 @@ Complete **ONLY** the [Classic](https://github.com/GuildCrafts/core-algorithms/b
 - [x] Tests for `setIntersection()` exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
 - [x] `setComplement()` algorithm is implemented according to the description in [algorithms.md][algorithms-list].
 - [x] Tests for `setComplement()` exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
-- [ ] `setSymmetricDifference()` algorithm is implemented according to the description in [algorithms.md][algorithms-list].
-- [ ] Tests for `setSymmetricDifference()` exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
+- [x] `setSymmetricDifference()` algorithm is implemented according to the description in [algorithms.md][algorithms-list].
+- [x] Tests for `setSymmetricDifference()` exist with at least 2 unit tests using valid inputs, and at least 1 unit test using invalid inputs.
 - [x] Repository includes a README file with basic installation and setup instructions.
 - [x] All dependencies are properly declared in `package.json`.
 - [ ] All major features are added via pull requests with a clear description and concise commit messages.
