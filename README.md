@@ -1,5 +1,5 @@
 # Core Algorithms
-This project is stocked full of yummy tests and implementations for algorithms commonly used in job interviews. 
+This project is stocked full of tests and implementations for algorithms commonly used in job interviews. 
 For the full list, see the [algorithms.md](algorithms.md) file.
 
 Base repository for [Core Algorithms](http://jsdev.learnersguild.org/goals/123)
